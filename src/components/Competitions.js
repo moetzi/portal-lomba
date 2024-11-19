@@ -49,3 +49,26 @@ const Competitions = () => {
 };
 
 export default Competitions;
+
+const [searchTerm, setSearchTerm] = useState('');
+
+const filteredCompetitions = competitions.filter(comp =>
+  comp.title.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
+return (
+  <div>
+    <input
+      type="text"
+      placeholder="Cari lomba..."
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+    <ul>
+      {filteredCompetitions.map((comp, index) => (
+        <li key={index}>
+          <strong>{comp.title}</strong>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
