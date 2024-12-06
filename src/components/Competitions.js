@@ -9,7 +9,7 @@ const Competitions = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://sheets.googleapis.com/v4/spreadsheets/1ZVVYm-66O53BIuobArrw89BpV6-dGFYt5f_cuZEfmKc/values/Sheet1!A2:E?key=AIzaSyBewXORY3j8C7nuG1_RNc3uPvvLsq2ft68`
+          `https://sheets.googleapis.com/v4/spreadsheets/pokokygadadiwa`
         );
         const rows = response.data.values;
         const data = rows.map((row) => ({
