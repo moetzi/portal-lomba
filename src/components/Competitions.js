@@ -9,7 +9,7 @@ const Competitions = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://sheets.googleapis.com/v4/spreadsheets/<SPREADSHEET_ID>/values/Sheet1!A2:E?key=<API_KEY>`
+          `https://sheets.googleapis.com/v4/spreadsheets/1ZVVYm-66O53BIuobArrw89BpV6-dGFYt5f_cuZEfmKc/values/Sheet1!A2:E?key=AIzaSyBewXORY3j8C7nuG1_RNc3uPvvLsq2ft68`
         );
         const rows = response.data.values;
         const data = rows.map((row) => ({
@@ -50,6 +50,7 @@ const Competitions = () => {
 
 export default Competitions;
 
+
 const [searchTerm, setSearchTerm] = useState('');
 
 const filteredCompetitions = competitions.filter(comp =>
@@ -72,3 +73,4 @@ return (
     </ul>
   </div>
 );
+
